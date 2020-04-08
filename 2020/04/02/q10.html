@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    Question 10 : Comment les outils de modélisation permettent-ils de prévoir les infléchissements de la courbe épidémique ? - CoVprehension
+    
+  </title>
+
+  <!-- 
+      META-DATA  
+  -->
+
+  <!-- For Google -->
+  <meta name="description" content="De nombreux phénomènes peuvent participer à l’infléchissement d’une courbe épidémique et il est par conséquent très important de pouvoir en faire de même dan...">
+  <meta name="keywords" content="coronavirus, covid-19, explanation, comprehension, popularizing science" />
+
+  <meta name="author" content="Le collectif CoVprehension" />
+  <meta name="copyright" content="CC BY-SA" />
+  <meta name="application-name" content="CoVprehension" />
+
+  <!-- For Facebook -->
+  <meta property="og:title" content="Question 10 : Comment les outils de modélisation permettent-ils de prévoir les infléchissements de la courbe épidémique ? - CoVprehension" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="/img/favicon.png" />
+  <meta property="og:url" content="https://covprehension.org" />
+  <meta property="og:description" content="De nombreux phénomènes peuvent participer à l’infléchissement d’une courbe épidémique et il est par conséquent très important de pouvoir en faire de même dan..." />
+
+  <!-- For Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Question 10 : Comment les outils de modélisation permettent-ils de prévoir les infléchissements de la courbe épidémique ? - CoVprehension" />
+  <meta name="twitter:description" content="De nombreux phénomènes peuvent participer à l’infléchissement d’une courbe épidémique et il est par conséquent très important de pouvoir en faire de même dan..." />
+  <meta name="twitter:image" content="/img/favicon.png" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+
+  <!-- TEMPLATE -->
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/assets/vendor/fontawesome-free/css/all.min.css">
+
+  <!-- PLUGIN -->
+  <link rel="stylesheet" href="/assets/particules.css">
+
+  <!-- CUSTOM -->
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://covprehension.org/2020/04/02/q10.html">
+  <link rel="alternate" type="application/rss+xml" title="CoVprehension" href="/feed.xml">
+
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">CoVprehension</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href=/simulator>Simulateur</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://framaforms.org/covprehension-mettez-nous-au-defi-posez-vos-questions-1585223922" target="_blank">Posez vos questions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/resources">Ressources</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">Qui sommes-nous ?</a>
+        </li>
+
+        <li class="nav-item dropdown show">
+          <a class="dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            🇫🇷
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            
+              
+              <a class="dropdown-item" href="/en/2020/04/02/q10.html" >🇬🇧</a>
+            
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Page Header -->
+
+<header class="masthead"  style="background-image: url('/img/bg-index.jpg')">
+
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-heading">
+          <h1>Question 10 : Comment les outils de modélisation permettent-ils de prévoir les infléchissements de la courbe épidémique ?</h1>
+          
+          <h2 class="subheading">Petite introduction aux systèmes dynamiques</h2>
+          
+          <span class="meta">Texte : <i>Arnaud B., Nathalie C., Frédéric A.</i> / Simulation : <i>Nathalie C., Frédéric A., Arnaud B.</i> / Illustration : <i>Nathalie C.</i> <br/>
+            le 
+
+	2 Avril 2020
+ &middot; <span class="reading-time" title="Estimation du temps de lecture">
+  
+   9 minutes  de lecture
+</span>
+
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+
+      <p>De nombreux phénomènes peuvent participer à l’infléchissement d’une courbe épidémique et il est par conséquent très important de pouvoir en faire de même dans les modèles. Concrètement, comment s’y prend-on ?</p>
+
+<p>Nous allons répondre à cette question en mobilisant les outils théoriques et pratiques de l’<strong>épidémiologie mathématique</strong>. En toute simplicité bien sûr.</p>
+
+<p>Prenons le cas d’école d’un modèle dans lequel les individus d’une population peuvent être soit sains (et donc susceptibles d’être infectés), soit infectés, soit guéris. On retrouve ici les composants de base de la plupart des modèles développés sur ce site. Dans le jargon de la modélisation des épidémies, on parle d’un <strong>modèle SIR</strong> (S pour Susceptible, I pour Infected et R pour Recovered). Ce type de modèle est très classique en épidémiologie mathématique.</p>
+
+<p>Dans la plupart des questions précédentes sur ce site, nous nous sommes intéressés à un nombre réduit d’individus en interaction et nous représentions donc les comportements individuels des individus. Dans le cas où nous souhaitons modéliser des <strong>populations entières</strong> (à l’échelle de la France, de l’Europe, du Monde) il ne fait guère sens de vouloir représenter une chaque comportement individuel, sauf si des <a href="https://lejournal.cnrs.fr/articles/covid-19-comment-sont-concus-les-modeles-des-epidemies">raisons particulières</a> motivent un tel investissement.</p>
+
+<p>On raisonnera alors plutôt à partir de groupes de populations considérés comme <strong>homogènes</strong> par leurs caractéristiques et leurs comportements et on se limitera volontairement à un <strong>nombre réduit de paramètres</strong> : outre la population initiale dans chacun des états S, I et R, on retiendra essentiellement le taux de contact, le taux de contagion et le taux de guérison.</p>
+
+<p>Bien entendu le taux de contagion, tout comme le taux de guérison, sont des paramètres propres à la maladie et aux <a href="https://websenti.u707.jussieu.fr/sentiweb/2063.pdf">mesures de prévention et de contrôle</a> mises en place. Ils sont estimés à partir de données empiriques élaborées, depuis le début de l’épidémie, en différents endroits du globe.</p>
+
+<p>Ce type de modèle, qui fait l’hypothèse (forte) que tout le monde va se comporter, contracter le virus et développer la maladie de la même manière, s’exprime essentiellement sous forme d’équations mathématiques. On peut toutefois, de manière très utile, le représenter également de manière graphique.</p>
+
+<p><img src="/img/posts/Q10-1.jpg" class="full-size" /></p>
+
+<p>L’idée de base est en vérité toute simple (même si sa mise en oeuvre pratique l’est nettement moins) : à partir d’une situation de départ (par exemple ici 100 000 personnes saines et 1 personne infectée) on va calculer l’évolution du nombre de personnes saines, infectées et guéries à partir de leur nombre connu l’instant d’avant et de nos deux mécanismes de transmission et de guérison.</p>
+
+<p>Une fois le modèle construit, sa <strong>résolution numérique</strong> produit les courbes épidémiques recherchées : on peut alors suivre l’évolution, au cours du temps, du nombre de personnes saines, infectées et guéries.</p>
+
+<p><img src="/img/posts/Q10-2.jpg" class="full-size" /></p>
+
+<p>A partir de là et en fixant les mêmes <strong>conditions initiales</strong> (ici les nombres de personnes saines, infectées et guéries en début de simulation), on peut chercher à jouer sur chacun des paramètres (le taux de contact, le taux de contagion et le taux de guérison), de manière à étudier leurs effets sur la forme des courbes obtenues.</p>
+
+<p>Un scénario de <strong>confinement</strong> nous poussera ainsi à définir un taux de contact inférieur à celui qui nous sert de référence, dans l’hypothèse d’un fonctionnement “normal”. De cette manière, la mise en place d’une période de confinement pendant notre épidémie virtuelle perturbera la courbe épidémique.</p>
+
+<p><em>Si la fenêtre du simulateur est tronquée à l’affichage, il vous suffit d’effectuer un zoom arrière</em></p>
+
+<p><a href="#" class="btn btn-primary" onclick="loadIframeSimulator(10, this); return false;">Simuler l’impact du confinement sur la courbe épidémique</a></p>
+<div class="iframeContainer"></div>
+
+<p>Vous vous demandez comment on a estimé le taux de contact avant et après confinement ? 
+C’est par ici !</p>
+
+<p>Tout ce que nous avons présenté ici peut sembler simple sur le papier. A un détail près : <strong>comment pouvons-nous estimer ce fameux taux de contact avant et pendant le confinement ?</strong></p>
+
+<p>Voilà une question incongrue n’est-ce pas ? <strong>En moyenne, combien d’interactions avec d’autres personnes avons-nous chaque jour ?</strong> 
+Nous parlons bien sûr ici d’interactions entre des personnes impliquant une <strong>proximité physique suffisante pour rendre possible la transmission du virus</strong>. 
+On imagine tout de suite que cette valeur doit varier énormément entre un parisien qui prend le métro en heure de pointe et un habitant de Lozère qui vit retiré du monde. Et pourtant, il nous faut bien trouver un <strong>ordre de grandeur</strong> capable de caractériser notre population le plus largement possible (rappelez-vous, nous faisons l’hypothèse que les individus de notre population se comportent de manière identique).</p>
+
+<p>Une <a href="https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0050074">étude</a> réalisée en 2007 dans plusieurs pays européens nous apporte un éclairage intéressant. Cette étude portait sur 7290 participants sélectionnés au hasard et ayant rapporté au moyen de petits carnets de bord un total de 97 904 interactions proches au cours d’une même journée. Son principal résultat : <strong>le nombre moyen de contacts quotidiens impliquant une proximité physique importante y est estimé à 13,4 contacts par personne et par jour</strong>. Voici un ordre de grandeur intéressant à utiliser n’est-ce pas ?</p>
+
+<p>Qu’en est-il maintenant en période de confinement ? S’il est bien suivi, les gens passent l’essentiel de leur temps chez eux et respectent la distanciation sociale lorsqu’ils sortent, donc la valeur devrait tendre vers zéro non ? Si vous avez lu la <a href="https://covprehension.org/2020/03/24/q2.html">question 2</a> et la <a href="https://covprehension.org/2020/03/30/q6.html">question 6</a>, vous savez déjà que ce n’est pas si simple..</p>
+
+<p>Nous n’avons pas trouvé dans la littérature de réponse précise à cette question, aussi fixons-nous ici une valeur par défaut de un seul contact par personne et par jour en moyenne pendant le confinement, soit 10 fois moins qu’en période normale.</p>
+
+<p>Comment traduisons-nous maintenant ces deux valeurs (~10 et ~1 contacts) dans notre modèle ? Voyons cela en détail.</p>
+
+<p>Nous savons déjà qu’à chaque instant de la simulation, une certaine quantité de personnes va quitter le stock des sains pour aller vers celui des infectés. Ce nombre dépend de quatre éléments :</p>
+<ul>
+  <li>le nombre de personnes saines dans la population</li>
+  <li>le nombre de personnes infectées dans la population</li>
+  <li>le taux de contact</li>
+  <li>le taux de contagion</li>
+</ul>
+
+<p>Le nombre de contacts qu’une personne infectée va avoir à chaque instant avec une personne saine au cours de la simulation repose sur la multiplication de trois des termes : Sains x Infectés x Taux de contact</p>
+
+<p>Si nous reprenons notre situation initiale (Sains = 100 000, Infectés = 1), alors pour obtenir la valeur souhaitée de 10 contacts à chaque pas de temps entre une personne infectée et des personnes saines, il nous faut définir un taux de contact qui soit équivalent à 0.0001 dans la mesure où 100 000 x 1 x 0.0001 = 10</p>
+
+<p>Bien entendu, cette valeur ne prend en compte que les interactions entre les personnes saines et les personnes infectées. Les interactions entre les personnes d’un même groupe (sains, infectés ou guéris) ou avec les personnes guéries ne sont donc pas prises en compte dans ce calcul.</p>
+
+<p>Par ailleurs, notons que le nombre de personnes saines, tout comme le nombre de personnes infectées ou guéries, évolue au cours du temps. <strong>Le nombre d’interactions va donc tout naturellement évoluer au cours de l’épidémie</strong>. Cela se conçoit aisément car moins il y a de personnes saines, et moins il peut y avoir d’interactions entre des personnes infectées et des personnes saines (ce qui est d’ailleurs un des principes de l’immunité de groupe, comme vous le verrez dans la question 8 en cours de traitement).</p>
+
+<p>Si vous avez lu attentivement ce que nous avons expliqué, une autre question doit se poser assez naturellement  … vous l’avez ? …</p>
+
+<p>Ce calcul est en effet actualisé à “chaque instant de la simulation”. Mais que représente le <strong>temps</strong> de la simulation dans notre cas ?</p>
+
+<p>Cela pourra (peut-être ?) faire l’objet d’une prochaine réponse ;-)</p>
+
+<p>C’est aussi simple que ça.</p>
+
+<p><a href="/" class="btn btn-primary">Aller plus loin</a></p>
+
+
+
+      <hr>
+
+      <div class="clearfix">
+
+        
+        
+        
+
+        
+
+        
+        <a class="btn btn-primary float-left" href="/2020/03/30/q6.html" data-toggle="tooltip" data-placement="top" title="Question 6 : Pourquoi sommes-nous confinés ?">&larr; Question précédente</a>
+        
+
+        
+        <a class="btn btn-primary float-right" href="/2020/04/02/q11.html" data-toggle="tooltip" data-placement="top" title="Question 11 : La COVID-19, une maladie de l'anthropocène ?">Question suivante &rarr;</a>
+        
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:covprehension@gmail.com" title="Envoyez nous un mail">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/covprehension" title="Aller voir les sources du site" target="_blank">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://covprehension.org/feed.xml" title="Lien RSS des questions">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          <li class="list-inline-item">
+            <a href="" title="Posez nous vos questions" target="_blank">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-question fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+        </ul>
+        <p class="copyright text-muted">
+          <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Le texte est mis à disposition selon les termes de la license <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+        </p>
+        <p class="copyright text-muted">
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Les illustrations sont mises à disposition selon les termes de la license <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- TEMPLATE -->
+<script src="/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/template/js/clean-blog.min.js"></script>
+
+<!-- PLUGIN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+
+
+	<script  src="/assets/lang/simu-fr.js"></script>
+
+<script src="/assets/particles.js"></script>
+
+
+
+
+
+
+
+<!-- CUSTOM -->
+<script src="/assets/scripts.js"></script>
+
+
+  
+
+
+</body>
+
+</html>
