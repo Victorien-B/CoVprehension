@@ -1,0 +1,68 @@
+---
+layout: post
+title: "Question ? : Certains pays n’ont pas choisi le confinement total mais le confinement sélectif : est-il possible de juguler ainsi une épidémie ?"
+subtitle: 
+
+# Par défaut image du masque 
+#background: '/img/bg-index.jpg'
+
+# Ne s'affichera pas si vide
+author_text : Juliette R. & Victorien B
+author_simulations : Juliette R.  & Victorien B
+author_illustration : 
+
+# Pour ne pas afficher la question dans le flux global
+hidden: true
+
+# Marque la question comme "traitée" ou "en traitement" si elle est, dans cette ordre, publiée ou non
+publish: false
+---
+
+Ne pas confiner totalement sa population a été un choix pour plusieurs pays, dont la Suède, par exemple, qui laisse encore aujourd’hui les individus décider eux-mêmes s’ils restent chez eux ou continuent à vaquer à leurs occupations. La logique des dirigeants a été de préserver l’activité économique tout en permettant à tout un chacun de participer activement à la lutte contre la diffusion de la maladie, à son échelle. On peut dire qu’il s’agit d’un choix de décentralisation des décisions, et la simulation agents, technique proposée sur ce site, est souvent utilisée pour traiter de ces questions. 
+
+Les recommandations données à la population sont  : 
+
+bien respecter les gestes « barrière » dans chaque interaction quotidienne, se confiner dès qu’on a un soupçon sur son état de santé, et ne ressortir que quelques jours après être remis. En outre les rassemblements de plus de 50 personnes ont été interdits. 
+
+Pour pouvoir mettre en place une telle politique il faut au moins deux pré-requis qui ne sont pas universels : que les symptômes  du Covid19 dans ses formes les plus légères soient connues de la population, afin que chacun puisse décider s’il est ou non infecté ; que chaque travailleur soit soutenu sérieusement par l’Etat pour négocier avec son employeur la possibilité de se mettre en télé-travail ou en arrêt maladie alors que l’accès à un médecin n’est pas toujours immédiat. 
+
+Ces pré-requis permettent de poser l’hypothèse dans notre modèle que les individus sont véritablement autonomes dans la gestion de leur comportement. 
+
+**Présentation du modèle**
+
+Le modèle utilisé est basé sur le modèle de la question 6 du confinement qui a été adapté en particulier pour prendre en compte la possibilité d’un confinement sélectif. La taille de population a été augmentée à 1000 : cela rend le modèle visuellement un peu moins lisible mais permet d’observer plus de phénomènes dans la durée ; dans le même temps, le mode de transmission a été légèrement transformé. Enfin, la dernière modification est que chaque agent qui est considéré comme immunisé (après la maladie) n’a plus à rester confiné et peut sortir vaquer à ses occupations. 
+
+En début de simulation il y a un unique agent infecté : « agent zéro ». Chaque jour, un agent a trois interactions à l’extérieur de la maison et une interaction par habitant de la maison. 
+
+Un agent “raisonnable” est un agent dont les interactions sont moins contagieuses grâce aux  “gestes barrière” et qui se confine dès qu’il est conscient d’être malade – il n’est plus alors en contact qu’avec sa famille. 
+
+La règle de transmission de base est telle que : à chaque pas de temps, l’agent A interagit au hasard un agent B dans son voisinage. Si A et B sont déjà infectés ou si aucun des deux n’est infecté, il ne se passe rien. Si B est infecté et A ne l’est pas, alors A devient infecté avec une probabilité de 20%. Cette probabilité change si les agents sont raisonnables : si seul A ou seul B est raisonnable, alors la probabilité est divisée par 2 ; si A et B sont raisonnables, la probabilité est divisée par 4. 
+
+**Nous pouvons alors tester ce modèle.**
+
+Testons le modèle avec les deux situations extrêmes : sans aucun confinement (ce qui permet d’observer la courbe épidémique de base), et avec confinement généralisé c’est-à-dire lorsque tous les agents se confinent dès qu’ils sont malades (avec alors plus aucune diffusion de la maladie).
+
+
+
+***Illustrations : à gauche, sans confinement, à droite avec le confinement immédiat des personnes malades et le respect par toutes la population des gestes « barrière ». - pour post : ici vraisemblement version “dynamique” de la propagation***
+
+Mais on peut imaginer que tous les agents ne sont pas raisonnables : regardons donc ce qui peut arriver si 80% des agents seulement sont raisonnables. On peut voir une situation subtile : si l’agent zéro (le premier à porter la maladie) est raisonnable, alors il n’y a pas de diffusion. Par contre si l’agent zéro n’est pas raisonnable, l’épidémie démarre, mais sa diffusion est moins importante que si aucun confinement n’est mis en place. On note que pendant toute la durée de l’épidémie un grand nombre d’agents continuent à travailler, et que l’on réussit à créer une immunité de groupe où le nombre d’immunisés dépasse le nombre d’agents susceptibles d’être infectés, assez rapidement – l’épidémie est suffisamment étalée.
+
+***Illustrations : Graphique en haut à gauche : pas de diffusion si le premier malade est raisonnable.  Graphiques de droite : le premier malade n’est pas “raisonnable”, la maladie se diffuse lentement (graphique du haut), la plupart de la population continue d’être active ( graphique du bas). - pour post : ici vraisemblement version “dynamique” de la propagation (droite) avec les deux graphiques***
+
+***Illustration : comparaison entre le cas où 80% et 85% d’agents sont raisonnables (de gauche à droite) : on voit qu’une petite différence transforme beaucoup la dynamique, et réduit beaucoup le nombre d’agents touchés par le virus durant l’histoire de l’épidémie.***
+
+Mais bien sûr, tout le monde a compris que le Covid19 pose un problème d’observation, même pour des agents raisonnables : ils ne savent pas toujours qu’ils sont malades car l’incubation peut durer longtemps et il y a beaucoup de cas peu symptomatiques et difficiles à interpréter. Quand ils ignorent qu’ils sont dangereux pour les autres, les agents “raisonnables” font les gestes barrière mais restent dans la vie active. Pour le modèle, on va supposer que les agents ne savent pas tout de suite qu’ils sont malades. On peut voir l’effet sur les courbes.
+
+***Illustrations : De gauche à droite 1, 4 et 7 jours pendant lesquels la maladie est trop discrète pour être perceptible par l’agent. En haut 100% de raisonnables en bas 85%.***
+
+La dernière question qui peut se poser est celle d’une réaction décalée des autorités, qui instaure le confinement sélectif en retard par rapport à l’épidémie, par exemple si l’épidémie n’a pas été assez anticipée. On peut observer sur les courbes combien ce retard peut être important à la fois pour l’activité économique, la vitesse de diffusion et le nombre d’agents infectés au total. 
+
+***Illustrations : 85% d’agents “raisonnables” sans retard de symptômes et de haut en bas, un confinement immédiat, ou après 7, 10 et 14 jours.***
+
+
+Il faut rappeler une hypothèse essentielle de ce modèle, dont on peut constater l’effet au niveau macroscopique. Dans le comportement des agents, il est indiqué que ceux-ci sont déconfinés dès qu’ils ne sont plus malades. Pour le Covid19 il semble qu’il est beaucoup plus simple d’identifier la fin de la maladie que le début - on peut faire l’hypothèse que les agents sont donc capables d’identifier leur guérison. Ceci a un impact très net sur la diffusion. On peut comprendre cela par une évolution du nombre d’interactions potentiellement contaminantes : si les agents immunisés ressortent, les agents pas encore infectés ont plus de chance de rencontrer ces agents qui ne sont pas dangereux pour eux que s’ils restaient confinés après leur maladie. Chaque interaction est donc plus probablement non contaminante. 
+ 
+
+***Illustrations : 100% d’agents “raisonnables”, 7 jours de retard de symptômes. En bleu, les agents guéris sortent de confinement, en orange les agents guéris restent confinés.***
+
